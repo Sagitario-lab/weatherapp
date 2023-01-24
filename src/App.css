@@ -1,21 +1,21 @@
 .App {
+  background-image: url("https://images6.alphacoders.com/568/568500.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.938);
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +24,10 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 321px) {
+    .App-header{
+      height: 80vh;
+      padding: 5%;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
