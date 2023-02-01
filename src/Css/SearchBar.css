@@ -10,6 +10,12 @@
     border-radius: 10%;
     font-size: 1rem;
 }
+.submit-btn:hover{
+    background-color: rgb(255, 255, 255);
+}
+.submit-btn:active{
+    background-color: rgb(176, 176, 176);
+}
 
 .input{
     font-size: 1rem;

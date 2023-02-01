@@ -3,10 +3,10 @@ import axios from "axios";
 import "../Css/Menu.css";
 
 
-export function Menu() {
+export function Menu({language, setLanguage}) {
   const [coords, setCoords] = useState();
   const [units, setUnits] = useState("imperial");
-  const [language, setLanguage] = useState("es");
+ 
 
   const languajeHandler = (e) => {
     const language = e.target.value;
@@ -25,6 +25,7 @@ export function Menu() {
 
   useEffect(() => {
     const success = (data) => {
+
       const lat = data.coords.latitude;
 
       const lon = data.coords.longitude;
@@ -39,19 +40,18 @@ export function Menu() {
     navigator.geolocation.getCurrentPosition(success);
   }, [units]);
 
-  
+
 
   return (
     <>
       <div>
+        
         {coords && (
           <div className="general-cont">
             {language === "en" ? (
               <>
                 <div>
-                  <span>
-                    Languaje
-                  </span>
+                  
                   <select name="language" onChange={languajeHandler} >
                     <option value={"es"}>Español</option>
                     <option value={"en"}>English</option>
@@ -146,7 +146,7 @@ export function Menu() {
 
                 <div className="cont-buttons">
                   <button onClick={changeImperial} className="button">Imperial</button>
-                  <button onClick={changeMetric} className="button btn1">Metric</button>
+                  <button onClick={changeMetric} className="button btn1">Metrico</button>
                 </div>
 
                 <div className="location-data">
